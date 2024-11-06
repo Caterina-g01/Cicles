@@ -1,7 +1,7 @@
-let numOne = parseFloat(prompt("Введите первое число", ""));
-let numTwo = parseFloat(prompt("Введите второе число", ""));
-let operation = prompt("Выберите операцию: +, -, *, /", "");
-if (!isNaN(numOne) || !isNaN(numTwo)) {
+const numOne = parseFloat(prompt("Введите первое число", ""));
+const numTwo = parseFloat(prompt("Введите второе число", ""));
+const operation = prompt("Выберите операцию: +, -, *, /", "");
+if (!isNaN(numOne) && !isNaN(numTwo)) {
   switch (operation) {
     case "+":
       alert(numOne + numTwo);
@@ -18,6 +18,7 @@ if (!isNaN(numOne) || !isNaN(numTwo)) {
       } else {
         alert(numOne / numTwo);
       }
+      break;
     default:
       alert("Неизвестная операция. Пожалуйста, выберите +, -, * или /.");
       break;
